@@ -34,7 +34,7 @@ public class Stream {
 		return dishList.stream()
 			.filter(a -> a.getCalories() < 500)
 			.sorted(comparing(Dish::getCalories))
-			.map(a -> a.getName())
+			.map(Dish::getName)
 			.collect(toList());
 	}
 }
